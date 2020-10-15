@@ -1,3 +1,6 @@
 <?php
 
-return [];
+return [
+    /*Page*/
+    '/telegram-error' => 'page/default/telegram-error',
+];

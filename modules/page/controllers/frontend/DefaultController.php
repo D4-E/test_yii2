@@ -17,4 +17,8 @@ class DefaultController extends Controller
     {
         return $this->render('index');
     }
+
+    public function actionTelegramError() {
+        return $this->render('telegram-error');
+    }
 }

@@ -18,7 +18,7 @@ $this->title = 'My Yii Application';
                     По умолчанию в базовом и расширенном приложении Yii2 настроена только цель \ yii \ log \ FileTarget.
                     Чтобы получать сообщениями из приложения, настройте компонент журнала.</p>
 
-                <p><a class="btn btn-default" href="/telegram_error">Реализация &raquo;</a></p>
+                <p><a class="btn btn-default" href="/telegram-error">Реализация &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Heading</h2>
