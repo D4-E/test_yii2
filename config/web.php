@@ -48,8 +48,8 @@ $config = [
             'targets' => [
                 [
                     'class' => 'sergeymakinen\yii\telegramlog\Target',
-                    'token' => '1149706208:AAFePl5dN-U5gzp-PYrzK4V2H6GF0m_rs-g',
-                    'chatId' => 340388248,
+                    'token' => $_config['token'],
+                    'chatId' => $_config['chatId'],
                     'levels' => ['error', 'warning'],
                     'logVars' => [] //не добавлять в лог глобальные переменные ($_SERVER, $_SESSION...)
                 ],
