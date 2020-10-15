@@ -20,25 +20,29 @@ $this->title = 'My Yii Application';
 
                 <p><a class="btn btn-default" href="/telegram-error">Реализация &raquo;</a></p>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="col-lg-8">
+                <h2>Тестовое задание II</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p><span>Имеется база со следующими таблицами:</span></p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+                <div style="background:#eee;border:1px solid #ccc;padding:5px 10px;"><code>CREATE TABLE `users` (<br />
+                        &nbsp;&nbsp;&nbsp; `id`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INT(11) NOT NULL AUTO_INCREMENT,<br />
+                        &nbsp;&nbsp;&nbsp; `name`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VARCHAR(255) DEFAULT NULL,<br />
+                        &nbsp;&nbsp;&nbsp; `gender`&nbsp;&nbsp;&nbsp;&nbsp; INT(11) NOT NULL COMMENT &#39;0 - не указан, 1 - мужчина, 2 - женщина.&#39;,<br />
+                        &nbsp;&nbsp;&nbsp; `birth_date` INT(11) NOT NULL COMMENT &#39;Дата в unixtime.&#39;,<br />
+                        &nbsp;&nbsp;&nbsp; PRIMARY KEY (`id`)<br />
+                        );<br />
+                        CREATE TABLE `phone_numbers` (<br />
+                        &nbsp;&nbsp;&nbsp; `id`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; INT(11) NOT NULL AUTO_INCREMENT,<br />
+                        &nbsp;&nbsp;&nbsp; `user_id` INT(11) NOT NULL,<br />
+                        &nbsp;&nbsp;&nbsp; `phone`&nbsp;&nbsp; VARCHAR(255) DEFAULT NULL,<br />
+                        &nbsp;&nbsp;&nbsp; PRIMARY KEY (`id`)<br />
+                        );</code></div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p><span>Напишите запрос, возвращающий имя и число указанных телефонных номеров девушек в возрасте от 18 до 22 лет.<br />
+Оптимизируйте таблицы и запрос при необходимости.</span></p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+                <p><a class="btn btn-default" href="/test-two">Реализация &raquo;</a></p>
             </div>
         </div>
 
