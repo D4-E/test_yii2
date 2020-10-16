@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function updateSearch(search, criterion) {
+            var params_arr = [];
+
+            if (search !== '') {
+                var split = search.split('?')[1],
+                    param_value;
+
+                params_arr = split.split('&');
+                for (var i = params_arr.length - 1; i >= 0; i -= 1) {
+                    param_value = params_arr[i].split('=')[1];
+                    if (param_value === criterion) {
+                        params_arr.splice(i, 1);
+                    }
+                }
+
+                params_arr.sort(function (a, b){
+                    if (a.split('=')[1] > b.split('=')[1]) {
+                        return 1;
+                    }
+                    if (a.split('=')[1] < b.split('=')[1]) {
+                        return -1;
+                    }
+                    return 0;
+                });
+            }
+
+            return params_arr;
+        }
+
+        var url = new URL(window.location.origin);
+        var search = window.location.search,
+            pathname = window.location.pathname;
+
+        search = updateSearch(search, '3');
+        if (pathname !== '') {
+            search.push('url=' + pathname);
+        }
+
+        search.forEach(function(item, i, arr) {
+            var data = item.split('=');
+            url.searchParams.set(data[0], data[1]);
+        });
+
+        console.log(url.href);
+        alert(url.href);
+    </script>
+</head>
+<body>
+</body>
+</html>
